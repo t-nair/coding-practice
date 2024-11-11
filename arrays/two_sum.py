@@ -18,8 +18,9 @@ class Solution:
         pair_indexes = {}
 
         for i, num in enumerate(nums):
-            if target - num in pair_indexes:
-                return [i, pair_indexes[target - num]]
+            c = target-num
+            if c in pair_indexes:
+                return [i, pair_indexes[c]]
             pair_indexes[num] = i
             
 
